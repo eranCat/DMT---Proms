@@ -36,7 +36,3 @@ Copyright (c) [2020] [HIT (Holon Institute of Technology]
 
 All rights reserved. This software and its source code may not be used, copied, modified, or
 distributed without explicit permission from the author.
-
-# Contact
-
-For inquiries or collaboration, please contact: erankatsav@gmail.com
