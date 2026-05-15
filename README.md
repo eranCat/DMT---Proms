@@ -1,38 +1,139 @@
-# DMT - Proms ++
+# DMT Medical App - Proms
 
-# Overview
+Patient-Reported Outcomes Measurement System (PROMS) medical application built with Kotlin for capturing and analyzing patient health data.
 
-## The DMT - Proms ++ App is a customizable and flexible platform designed to support various medical use cases. The app enables clinics, therapists, and patients to digitize traditional workflows, improving efficiency, accessibility, and data management. It is built using Jetpack Compose Multiplatform, allowing seamless operation across Android, iOS, and desktop environments.
+## Features
 
-# Features
+- **Patient Questionnaires**: Structured PROMS collection
+- **Health Metrics**: Track symptoms, pain, quality of life
+- **Data Analysis**: Visualize trends over time
+- **Doctor Integration**: Share reports with healthcare providers
+- **Multi-language Support**: Support for multiple languages
+- **Offline Mode**: Works without internet connection
+- **Secure Storage**: Encrypted patient data
+- **Cloud Sync**: Automatic backup to secure server
 
-- Questionnaires & Surveys: Digitized assessments and patient feedback forms.
-- Cognitive Tests: Transformation of traditional pen-and-paper cognitive tests into an interactive
-  digital format.
-- Therapist-Patient Communication: Secure messaging and appointment scheduling.
-- Reports & Monitoring:
-- Medication intake tracking
-- Activity logs
-- Measurement records (e.g., blood pressure, heart rate, mobility tracking)
-- Sensors Data Collection: Integration with device sensors to gather real-time health and activity
-  data.
-- Notifications & Alerts: Sending reminders for medication, upcoming appointments, and activity
-  tracking.
-- Customizable Modules: Clinics can select and configure the features that best align with their
-  specific needs.
+## Tech Stack
 
-# Technologies Used
+- **Language**: Kotlin
+- **Platform**: Android (Native)
+- **Architecture**: MVVM + Clean Architecture
+- **Database**: Room (local), Firebase (cloud)
+- **UI Framework**: Jetpack Compose / Material Design
+- **Security**: Encryption, secure storage
+- **Build Tool**: Gradle
 
-- Jetpack Compose Multiplatform (Kotlin): UI development across Android, iOS, and desktop.
-- Ktor: Backend communication and API handling.
-- SQLite / Room: Local storage and data persistence.
-- Koin: Dependency injection for better modularization.
-- Material Design: Modern and accessible UI components.
-- Firebase: For push notifications.
+## Project Structure
 
-# License
+```
+├── app/src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── data/           # Data layer
+│   │   │   ├── domain/         # Business logic
+│   │   │   ├── presentation/   # UI layer
+│   │   │   └── di/             # Dependency injection
+│   │   └── res/                # Resources
+│   └── test/                   # Unit tests
+├── build.gradle
+└── AndroidManifest.xml
+```
 
-Copyright (c) [2020] [HIT (Holon Institute of Technology]
+## Getting Started
 
-All rights reserved. This software and its source code may not be used, copied, modified, or
-distributed without explicit permission from the author.
+### Requirements
+
+- Android Studio Hedgehog+
+- Android SDK 24+
+- Kotlin 1.9+
+
+### Setup
+
+```bash
+# Clone repository
+git clone https://github.com/eranCat/DMT---Proms.git
+
+# Open in Android Studio
+# Sync Gradle
+# Run on emulator or device
+```
+
+### Configuration
+
+1. Firebase setup:
+   - Create Firebase project
+   - Download `google-services.json`
+   - Place in `app/` directory
+
+2. Enable services:
+   - Realtime Database
+   - Cloud Storage
+   - Authentication
+
+## Features in Detail
+
+### Questionnaire System
+- Pre-built PROMS templates
+- Customizable question types (MCQ, Likert, open-ended)
+- Progress tracking
+- Timed questionnaires
+
+### Data Visualization
+- Charts and graphs
+- Trend analysis
+- Comparison views
+- Export to PDF
+
+### Patient Dashboard
+- Health overview
+- Upcoming questionnaires
+- Medical history
+- Appointment scheduling
+
+### Doctor Portal
+- View patient responses
+- Analyze trends
+- Generate reports
+- Send messages
+
+## API Endpoints
+
+- `GET /patients/:id/responses` - Get patient responses
+- `POST /responses` - Submit questionnaire response
+- `GET /analytics/:patientId` - Get analytics
+- `POST /reports/generate` - Generate report
+
+## Testing
+
+```bash
+# Unit tests
+./gradlew test
+
+# UI tests
+./gradlew connectedAndroidTest
+
+# Code coverage
+./gradlew jacocoTestReport
+```
+
+## Privacy & Security
+
+- HIPAA compliant
+- End-to-end encryption
+- Secure authentication
+- Data anonymization options
+- Regular security audits
+
+## Deployment
+
+```bash
+# Build release APK
+./gradlew assembleRelease
+
+# Build app bundle for Play Store
+./gradlew bundleRelease
+```
+
+---
+
+**Empowering patients through health data** 🏥
